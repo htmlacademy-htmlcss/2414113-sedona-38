@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Виктор Кофтанюк](https://up.htmlacademy.ru/htmlcss/38/user/2414113).
-* Наставник: `Неизвестно`.
+- Студент: [Виктор Кофтанюк](https://up.htmlacademy.ru/htmlcss/38/user/2414113).
+- Наставник: [Виктор Рыбаков](https://htmlacademy.ru/profile/viktor-rybakov).
 
 ---
 
