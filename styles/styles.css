@@ -80,6 +80,7 @@ body {
 .advantages-description-white {
   color: #fff;
 }
+
 .search-btn {
   display: block;
   margin: 0 auto;
@@ -111,7 +112,11 @@ body {
 .newsletter-form {
   text-align: center;
 }
+.newsletter-input {
+  font-family: inherit;
+}
 .newsletter-button {
+  font-family: inherit;
   color: #fff;
   background-color: #82b3d3;
 }
@@ -157,6 +162,7 @@ body {
   line-height: 23px;
 }
 .button-apply {
+  font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -165,6 +171,7 @@ body {
   background-color: #82b3d3;
 }
 .button-reset {
+  font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -177,6 +184,9 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+}
+.select-control {
+  font-family: inherit;
 }
 .product-list {
   text-align: center;
@@ -203,6 +213,7 @@ body {
   text-transform: uppercase;
 }
 .product-favorites {
+  font-family: inherit;
   background-color: #82b3d3;
 }
 .active-button {
