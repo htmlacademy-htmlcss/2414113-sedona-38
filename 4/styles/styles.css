@@ -47,8 +47,40 @@ body {
   /* BACK COLOR ДЛЯ ВИДИМОСТИ КОНТЕНТНОГО ИЗОБРАЖЕНИЯ В СЛУЧАЕ НЕПОДГРУЗКИ ДЕКОРАТИВНОГО(БЕЛОГО ЦВЕТА)  */
   background-color: #000000;
 }
-.advantages-title,
-.service-title,
+.advantages-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #000000;
+}
+.advantages-text {
+  text-align: center;
+  font-size: 22px;
+  line-height: 26px;
+}
+.advantages-item {
+  text-align: center;
+  background-color: #82b3d3;
+  list-style: none;
+}
+.service-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #000000;
+}
+.service-text {
+  text-align: center;
+  font-size: 22px;
+  line-height: 26px;
+}
+.service-item {
+  text-align: center;
+  background-color: #82b3d3;
+  list-style: none;
+}
 .search-title {
   text-align: center;
   font-size: 30px;
@@ -56,19 +88,12 @@ body {
   line-height: 36px;
   color: #000000;
 }
-.advantages-text,
-.service-text,
 .search-text {
   text-align: center;
   font-size: 22px;
   line-height: 26px;
 }
-.advantages-item,
-.service-item {
-  text-align: center;
-  background-color: #82b3d3;
-  list-style: none;
-}
+
 .advantages-item-title,
 .service-item-title {
   font-size: 24px;
@@ -111,14 +136,17 @@ body {
 .newsletter-form {
   text-align: center;
 }
+.newsletter-input {
+  font-family: inherit;
+}
 .newsletter-button {
+  font-family: inherit;
   color: #fff;
   background-color: #82b3d3;
 }
 .header-social-link {
   list-style: none;
 }
-
 .header-phone {
   font-size: 40px;
   line-height: 40px;
@@ -157,6 +185,7 @@ body {
   line-height: 23px;
 }
 .button-apply {
+  font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -165,6 +194,7 @@ body {
   background-color: #82b3d3;
 }
 .button-reset {
+  font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -177,6 +207,9 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+}
+.select-control {
+  font-family: inherit;
 }
 .product-list {
   text-align: center;
@@ -203,6 +236,7 @@ body {
   text-transform: uppercase;
 }
 .product-favorites {
+  font-family: inherit;
   background-color: #82b3d3;
 }
 .active-button {
@@ -215,7 +249,6 @@ body {
   line-height: 20px;
   text-transform: uppercase;
 }
-
 .pagination-item {
   list-style: none;
 }
