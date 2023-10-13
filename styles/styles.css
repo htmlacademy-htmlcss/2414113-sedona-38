@@ -1,3 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+/* .visually-hidden {
+  display: block;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+} */
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -14,16 +28,78 @@
   font-display: swap;
 }
 
+/*Обнуление */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+}
+/*  */
+
+html {
+  height: 100%;
+}
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  background-color: #f2f2f2;
+  min-width: 1280px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.page-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 1200px;
   background-color: #ffffff;
+  margin: 0 auto;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 .page-header {
   color: #000000;
+  /* Первый способ */
+  padding: 0 70px;
+
+  /* Второй способ
+  width: 1060px;
+  margin: 0 auto; */
+}
+
+.header-logo {
+  margin-bottom: -6px;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.header-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation-wrapper {
+  display: flex;
+}
+.navigation-list {
+  display: flex;
+  align-items: center;
 }
 .navigation-item {
   list-style: none;
@@ -39,6 +115,14 @@ body {
 .navigation-link-current {
   border-bottom: 2px solid #756257;
 }
+
+/* СТИКИ-футера */
+.main-container {
+  flex-grow: 1;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .hero {
   background-image: url(../images/background-images/hero-background.jpg);
   background-repeat: no-repeat;
@@ -46,6 +130,10 @@ body {
   background-position: center bottom;
   /* BACK COLOR ДЛЯ ВИДИМОСТИ КОНТЕНТНОГО ИЗОБРАЖЕНИЯ В СЛУЧАЕ НЕПОДГРУЗКИ ДЕКОРАТИВНОГО(БЕЛОГО ЦВЕТА)  */
   background-color: #000000;
+}
+.welcome-img {
+  display: block;
+  margin: 0 auto;
 }
 .advantages-title {
   text-align: center;
@@ -106,6 +194,10 @@ body {
   color: #fff;
 }
 .search-btn {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
   display: block;
   margin: 0 auto;
   text-transform: uppercase;
@@ -141,17 +233,32 @@ body {
 }
 .newsletter-button {
   font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
   color: #fff;
   background-color: #82b3d3;
 }
-.header-social-link {
+.page-footer {
+  padding: 40px 70px 30px 70px;
+}
+.footer-contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-social-link {
   list-style: none;
 }
-.header-phone {
+.footer-phone {
   font-size: 40px;
   line-height: 40px;
   color: #000;
   text-decoration: none;
+}
+.footer-logo {
+  display: block;
+  align-self: center;
 }
 .main-header-wrapper {
   color: #fff;
@@ -183,6 +290,7 @@ body {
 }
 .control {
   line-height: 23px;
+  cursor: pointer;
 }
 .button-apply {
   font-family: inherit;
@@ -267,3 +375,5 @@ body {
   background-color: #fff;
   color: inherit;
 }
+/* Добавить контейнер внутри боди */
+/*  */
