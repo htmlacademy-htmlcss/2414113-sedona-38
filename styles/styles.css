@@ -48,6 +48,9 @@ p {
 button {
   cursor: pointer;
 }
+img {
+  display: block;
+}
 /*  */
 
 html {
@@ -89,17 +92,22 @@ body {
   display: block;
   position: relative;
   z-index: 2;
+  margin-right: 28px;
 }
 .header-navigation {
   display: flex;
   justify-content: space-between;
 }
-.navigation-wrapper {
+/* .navigation-wrapper {
   display: flex;
-}
+} */
 .navigation-list {
   display: flex;
   align-items: center;
+}
+.navigation-list:nth-child(2) {
+  /* margin-right: auto; */
+  flex-grow: 1;
 }
 .navigation-item {
   list-style: none;
@@ -111,11 +119,24 @@ body {
   text-align: center;
   color: inherit;
   text-decoration: none;
+  padding: 18px 16px;
+  position: relative;
 }
 .navigation-link-current {
   border-bottom: 2px solid #756257;
 }
-
+.navigation-btn {
+  display: block;
+  width: 160px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #756157;
+  border-radius: 4px;
+  padding: 8px 10px;
+  text-transform: uppercase;
+}
 /* СТИКИ-футера */
 .main-container {
   flex-grow: 1;
@@ -130,11 +151,14 @@ body {
   background-position: center bottom;
   /* BACK COLOR ДЛЯ ВИДИМОСТИ КОНТЕНТНОГО ИЗОБРАЖЕНИЯ В СЛУЧАЕ НЕПОДГРУЗКИ ДЕКОРАТИВНОГО(БЕЛОГО ЦВЕТА)  */
   background-color: #000000;
-  padding: 50px 370px 83px 370px;
+  padding: 50px 0px 83px;
 }
 .welcome-img {
   display: block;
   margin: 0 auto;
+}
+.advantages {
+  padding-top: 70px;
 }
 .advantages-title {
   text-align: center;
@@ -148,10 +172,28 @@ body {
   font-size: 22px;
   line-height: 26px;
 }
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 .advantages-item {
   text-align: center;
   background-color: #82b3d3;
   list-style: none;
+}
+.advantages-article {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages-article-custom {
+  width: 400px;
+  padding: 103px 85px;
+  flex-direction: column;
+  min-height: 385px;
+}
+.advantages-wrapper {
+  align-self: center;
+  padding: 103px 85px;
 }
 .advantages-item-custom {
   background-color: rgba(131, 179, 211, 0.12);
@@ -160,7 +202,7 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 .service {
-  margin-bottom: 96px;
+  padding-top: 64px;
 }
 .service-title {
   text-align: center;
@@ -209,18 +251,22 @@ body {
   background-repeat: no-repeat;
   background-position: center 30px;
 }
-
+.search {
+  padding: 96px 304px;
+}
 .search-title {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   color: #000000;
+  margin-bottom: 20px;
 }
 .search-text {
   text-align: center;
   font-size: 22px;
   line-height: 26px;
+  margin-bottom: 55px;
 }
 
 .advantages-item-title {
@@ -254,6 +300,7 @@ body {
   background-position: center bottom;
   /* BACK COLOR ДЛЯ ВИДИМОСТИ КОНТЕНТНОГО ИЗОБРАЖЕНИЯ В СЛУЧАЕ НЕПОДГРУЗКИ ДЕКОРАТИВНОГО(БЕЛОГО ЦВЕТА)  */
   background-color: #000000;
+  padding: 96px 0px 104px;
 }
 .newsletter-title {
   font-size: 30px;
@@ -261,11 +308,15 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .newsletter-text {
   text-align: center;
   font-size: 22px;
   line-height: 26px;
+  max-width: 475px;
+  margin: 0 auto;
+  margin-bottom: 54px;
 }
 .newsletter-form {
   text-align: center;
@@ -352,6 +403,9 @@ body {
   color: inherit;
   background: transparent;
 }
+.section-filter {
+  padding: 50px 70px 60px;
+}
 .select-info {
   font-size: 30px;
   font-weight: 700;
@@ -362,12 +416,19 @@ body {
   font-family: inherit;
 }
 .product-list {
-  text-align: center;
 }
 .product-card {
   list-style: none;
 }
+.product-card-article {
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+  width: 340px;
+  padding: 20px;
+}
 .product-card-link {
+  display: block;
+  margin-bottom: 16px;
   text-decoration: none;
   color: #333333;
 }
@@ -399,15 +460,29 @@ body {
   line-height: 20px;
   text-transform: uppercase;
 }
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 .pagination-item {
   list-style: none;
 }
+
 .pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #ffffff;
   background-color: #82b3d3;
+  text-transform: uppercase;
   border-radius: 4px;
+  padding: 0 10px;
+  min-width: 60px;
+  height: 60px;
 }
+
 .pagination-current {
   color: #000000;
   background-color: #f2f2f2;
