@@ -6,12 +6,17 @@ html {
 *::before {
   box-sizing: inherit;
 }
-/* .visually-hidden {
-  display: block;
+.visually-hidden {
+  /* display: block;
   visibility: hidden;
   width: 0;
-  height: 0;
-} */
+  height: 0; */
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -98,6 +103,7 @@ body {
 .navigation-link-current {
   border-bottom: 2px solid #756257;
 }
+
 .navigation-btn {
   display: block;
   width: 160px;
@@ -172,6 +178,7 @@ body {
 .advantages-wrapper {
   align-self: center;
   padding: 103px 85px;
+  min-height: 385px;
 }
 
 .advantages-item-custom {
@@ -218,6 +225,9 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   margin: 0 0 30px;
+}
+.service-item-text {
+  margin: 0;
 }
 .service-articale {
   text-align: center;
@@ -267,7 +277,9 @@ body {
 
   margin: 0 0 30px;
 }
-
+.advantages-item-description {
+  margin: 0;
+}
 .advantages-title-white,
 .advantages-description-white {
   color: #fff;
@@ -428,6 +440,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0 0 46px;
 }
 .select-control {
   font-family: inherit;
