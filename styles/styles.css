@@ -483,12 +483,20 @@ body {
 .logo-academy:hover {
   fill: rgba(117, 97, 87, 1);
 }
+/* Почему оно не работает? */
 .logo-academy:focus {
   fill: rgba(117, 97, 87, 1);
 }
+
+.footer-logo svg:focus {
+  fill: rgba(117, 97, 87, 1);
+}
+
+/*  */
 .logo-academy:active {
   fill: rgba(117, 97, 87, 0.3);
 }
+
 .main-header-wrapper {
   color: #fff;
   background-image: url(../images/background-images/filter-background.jpg);
@@ -593,6 +601,9 @@ body {
   gap: 8px;
 }
 .view-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 48px;
   height: 48px;
   border: 2px solid #e5e5e5;
@@ -600,8 +611,19 @@ body {
   background-color: #ffffff;
   cursor: pointer;
 }
+
 .button-active {
   border: 2px solid #000000;
+}
+
+.grid-button {
+  fill: rgba(0, 0, 0, 1);
+}
+.view-button:focus {
+  border: 2px solid rgba(104, 162, 202, 1);
+}
+.view-button:focus-visible {
+  border: 2px solid rgba(104, 162, 202, 1);
 }
 .product-list {
   display: grid;
