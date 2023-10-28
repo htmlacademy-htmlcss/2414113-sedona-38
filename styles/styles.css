@@ -97,7 +97,7 @@ body {
   position: relative;
 }
 .navigation-link-current {
-  border-bottom: 2px solid #756257;
+  /* border-bottom: 2px solid #756257; */
 }
 
 .navigation-btn {
@@ -278,7 +278,9 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   max-width: 175px;
-  margin: auto auto 30px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  padding: 0 2px 0;
 }
 .advantages-item-description {
   margin: 0;
@@ -366,14 +368,45 @@ body {
 }
 .footer-social-list {
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
 .footer-social-link {
   list-style: none;
-  width: 47px;
+  /* width: 47px;
   height: 40px;
   border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.footer-social-link a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 10px;
+  height: 40px;
+}
+.social-yotube,
+.social-telegram,
+.social-vkontakte {
+  fill: rgba(131, 179, 211, 1);
+}
+.social-yotube:hover,
+.social-telegram:hover,
+.social-vkontakte:hover {
+  fill: rgba(104, 162, 202, 1);
+}
+/* .social-yotube:focus,
+.social-telegram:focus,
+.social-vkontakte:focus {
+  fill: rgba(104, 162, 202, 1);
+} */
+.social-yotube:active,
+.social-telegram:active,
+.social-vkontakte:active {
+  fill: rgba(104, 162, 202, 0.3);
 }
 .footer-phone {
   font-size: 40px;
@@ -381,9 +414,32 @@ body {
   color: #000;
   text-decoration: none;
 }
+.footer-phone:hover {
+  color: rgba(117, 97, 87, 1);
+}
+
+.footer-phone:focus {
+  color: rgba(117, 97, 87, 1);
+}
+.footer-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .footer-logo {
   display: block;
   align-self: center;
+}
+.logo-academy {
+  fill: rgba(0, 0, 0, 1);
+}
+.logo-academy:hover {
+  fill: rgba(117, 97, 87, 1);
+}
+.logo-academy:focus {
+  fill: rgba(117, 97, 87, 1);
+}
+.logo-academy:active {
+  fill: rgba(117, 97, 87, 0.3);
 }
 .main-header-wrapper {
   color: #fff;
