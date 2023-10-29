@@ -483,12 +483,7 @@ body {
 .logo-academy:hover {
   fill: rgba(117, 97, 87, 1);
 }
-/* Почему оно не работает? */
-.logo-academy:focus {
-  fill: rgba(117, 97, 87, 1);
-}
-
-.footer-logo svg:focus {
+.footer-logo:focus svg {
   fill: rgba(117, 97, 87, 1);
 }
 
@@ -524,6 +519,20 @@ body {
 }
 .breadcrubs-item {
   list-style: none;
+}
+.catalog-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+}
+.catalog-filter fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 .catalog-filter-title {
   font-size: 20px;
@@ -619,11 +628,20 @@ body {
 .grid-button {
   fill: rgba(0, 0, 0, 1);
 }
+
+.view-button:hover {
+  border: 2px solid #000;
+}
 .view-button:focus {
-  border: 2px solid rgba(104, 162, 202, 1);
+  outline: none;
+  border: 2px solid #000;
 }
 .view-button:focus-visible {
-  border: 2px solid rgba(104, 162, 202, 1);
+  outline: none;
+  border: 2px solid #68a2ca;
+}
+.view-button:active {
+  border: 2px solid #000;
 }
 .product-list {
   display: grid;
@@ -694,6 +712,22 @@ body {
   min-height: 36px;
   align-self: flex-start;
 }
+.product-card-button:hover {
+  background-color: rgba(97, 80, 72, 1);
+  outline: 3px solid #83b3d3;
+}
+.product-card-button:focus {
+  /* border: ; */
+  /* outline: 3px solid #83b3d3; */
+}
+.product-card-button:focus-visible {
+  /* border: ; */
+  outline: 3px solid #83b3d3;
+}
+.product-card-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(117, 97, 87, 1);
+}
 .product-card-text {
   margin: 0;
 }
@@ -706,8 +740,29 @@ body {
   background-color: #82b3d3;
   margin-right: 0;
 }
+.product-favorites:hover {
+  background-color: rgba(104, 162, 202, 1);
+}
+.product-favorites:focus {
+  background-color: rgba(104, 162, 202, 1);
+}
+.product-favorites:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(130, 179, 211, 1);
+}
+
 .active-button {
   background-color: #7db54f;
+}
+.active-button:hover {
+  background-color: rgba(108, 158, 66, 1);
+}
+.active-button:focus {
+  background-color: rgba(108, 158, 66, 1);
+}
+.active-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(125, 181, 79, 1);
 }
 .rating {
   color: #333333;
