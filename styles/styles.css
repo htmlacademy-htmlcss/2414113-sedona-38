@@ -498,7 +498,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  /* BACK COLOR ДЛЯ ВИДИМОСТИ КОНТЕНТНОГО ИЗОБРАЖЕНИЯ В СЛУЧАЕ НЕПОДГРУЗКИ ДЕКОРАТИВНОГО(БЕЛОГО ЦВЕТА)  */
   background-color: #000000;
   padding: 35px 70px 70px;
 }
@@ -516,6 +515,29 @@ body {
 }
 .breadcrubs-link {
   font-size: 16px;
+}
+.breadcrubs-house {
+  fill: white;
+}
+.breadcrubs-house:hover {
+  fill: rgba(255, 255, 255, 0.6);
+}
+.breadcrubs-house:active {
+  fill: rgba(255, 255, 255, 0.3);
+}
+.breadcrubs-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  background-image: url(../images/arrow-right.svg);
+  width: 7px;
+  height: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 10px;
+  position: relative;
+  bottom: 15px;
+  left: 15px;
 }
 .breadcrubs-item {
   list-style: none;
@@ -824,5 +846,8 @@ body {
   background-color: #fff;
   color: inherit;
 }
-/* Добавить контейнер внутри боди */
-/*  */
+/* вОПРОСЫ:
+1. У карточки товара кнопки неактив что значит?
+2.
+
+*/
