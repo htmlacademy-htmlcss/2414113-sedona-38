@@ -100,8 +100,17 @@ body {
   padding: 18px 16px;
   position: relative;
 }
-.navigation-link-current {
-  /* border-bottom: 2px solid #756257; */
+/* .navigation-link-current {
+  border-bottom: 2px solid #756257;
+} */
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  left: 16px;
+  bottom: 0;
+  height: 2px;
+  background-color: #756257;
 }
 .navigation-link-user {
   text-decoration: none;
@@ -216,7 +225,7 @@ body {
 }
 .advantages-article-custom {
   width: 400px;
-  padding: 103px 85px;
+  padding: 112px 85px;
   flex-direction: column;
   min-height: 385px;
 }
@@ -233,7 +242,7 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 .service {
-  padding-top: 64px;
+  padding-top: 63px;
 }
 .service-title {
   text-align: center;
@@ -282,7 +291,7 @@ body {
   background-image: url(../images/service-img/house.svg);
   width: 75px;
   height: 72px;
-  top: -102px;
+  top: -103px;
   /* left: 50%;
   margin-left: 37px; */
 }
@@ -292,7 +301,7 @@ body {
   background-image: url(../images/service-img/food.svg);
   width: 75px;
   height: 72px;
-  top: -102px;
+  top: -103px;
   left: 50%;
   margin-left: -38px;
 }
@@ -302,7 +311,7 @@ body {
   background-image: url(../images/service-img/souvenir.svg);
   width: 75px;
   height: 76px;
-  top: -102px;
+  top: -105px;
   left: 50%;
   margin-left: -38px;
 }
@@ -313,7 +322,7 @@ body {
   text-align: center;
   background-color: rgba(131, 179, 211, 0.12);
   list-style: none;
-  padding: 174px 85px 90px 85px;
+  padding: 184px 85px 90px 85px;
   max-width: 400px;
 }
 /* .service-house-article {
@@ -333,7 +342,7 @@ body {
   background-position: center 30px;
 } */
 .search {
-  padding: 96px 304px;
+  padding: 86px 304px 96px 304px;
 }
 .search-title {
   text-align: center;
@@ -470,9 +479,11 @@ body {
 }
 .footer-social-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
+  width: 145px;
 }
 .footer-social-link {
   list-style: none;
@@ -625,6 +636,10 @@ body {
   line-height: 23px;
   cursor: pointer;
 }
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .button-apply {
   font-family: inherit;
   font-size: 16px;
@@ -711,14 +726,11 @@ body {
 .view-button:hover {
   border: 2px solid #000;
 }
+
 .view-button:focus {
-  outline: none;
   border: 2px solid #000;
 }
-.view-button:focus-visible {
-  outline: none;
-  border: 2px solid #68a2ca;
-}
+
 .view-button:active {
   border: 2px solid #000;
 }
@@ -843,6 +855,22 @@ body {
   color: rgba(255, 255, 255, 0.3);
   background-color: rgba(125, 181, 79, 1);
 }
+.product-card-stars {
+  height: 17px;
+  margin: auto 0;
+  background-image: url(../images/stars-product.svg);
+  background-repeat: space no-repeat;
+}
+.product-card-stars-4 {
+  width: 89px;
+}
+.product-card-stars-3 {
+  width: 66px;
+}
+.product-card-stars-2 {
+  width: 42px;
+}
+
 .rating {
   color: #333333;
   font-size: 16px;
@@ -903,14 +931,6 @@ body {
   background-color: #fff;
   color: inherit;
 }
-/* вОПРОСЫ:
-1. У карточки товара кнопки неактив что значит?
-2.
 
-*/
 /* План работы
 1.Поменять состояния у всех кнопок!(hover,focus,active)
-2.Досмотреть полностью 8 раздел (осталось чуть чуть)
-3.На класс service-list изменить все иконки на пвсевдокласс(before,after)(видео 8.20. Практика: оформление декоративных элементов и состояний 4:15
-4.
-*/
