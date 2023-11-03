@@ -86,6 +86,10 @@ body {
 .navigation-item {
   list-style: none;
 }
+.navigation-item-user {
+  list-style: none;
+}
+
 .navigation-link {
   font-size: 20px;
   line-height: 24px;
@@ -96,10 +100,63 @@ body {
   padding: 18px 16px;
   position: relative;
 }
-.navigation-link-current {
+/* .navigation-link-current {
   border-bottom: 2px solid #756257;
+} */
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  left: 16px;
+  bottom: 0;
+  height: 2px;
+  background-color: #756257;
 }
+.navigation-link-user {
+  text-decoration: none;
+  color: inherit;
+}
+.navigation-link-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 22px 12px;
+}
+/*  */
+/* .navigation-item-user:not(:last-child) a {
+  width: 44px;
+  height: 64px;
+  border: 1px solid #000;
+}
+.navigation-link-search {
+  background-image: url(../images/header-icon/search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 18px;
+  height: 18px;
+} */
 
+/*  */
+.navigation-icon {
+  position: absolute;
+}
+.header-quantity {
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 10px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #7db54f;
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+}
+.navigation-link-search {
+  display: flex;
+  padding: 22px 12px;
+}
 .navigation-btn {
   display: block;
   width: 160px;
@@ -168,7 +225,7 @@ body {
 }
 .advantages-article-custom {
   width: 400px;
-  padding: 103px 85px;
+  padding: 112px 85px;
   flex-direction: column;
   min-height: 385px;
 }
@@ -185,7 +242,7 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 .service {
-  padding-top: 64px;
+  padding-top: 63px;
 }
 .service-title {
   text-align: center;
@@ -226,6 +283,37 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   margin: 0 0 30px;
+  position: relative;
+}
+.service-icon-house::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/service-img/house.svg);
+  width: 75px;
+  height: 72px;
+  top: -103px;
+  /* left: 50%;
+  margin-left: 37px; */
+}
+.service-icon-food::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/service-img/food.svg);
+  width: 75px;
+  height: 72px;
+  top: -103px;
+  left: 50%;
+  margin-left: -38px;
+}
+.service-icon-souvenir::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/service-img/souvenir.svg);
+  width: 75px;
+  height: 76px;
+  top: -105px;
+  left: 50%;
+  margin-left: -38px;
 }
 .service-item-text {
   margin: 0;
@@ -234,15 +322,15 @@ body {
   text-align: center;
   background-color: rgba(131, 179, 211, 0.12);
   list-style: none;
-  padding: 130px 85px 90px 85px;
+  padding: 184px 85px 90px 85px;
   max-width: 400px;
 }
-.service-house-article {
+/* .service-house-article {
   background-image: url(../images/service-img/house.svg);
   background-repeat: no-repeat;
   background-position: center 30px;
-}
-.service-food-article {
+} */
+/* .service-food-article {
   background-color: #fff;
   background-image: url(../images/service-img/food.svg);
   background-repeat: no-repeat;
@@ -252,9 +340,9 @@ body {
   background-image: url(../images/service-img/souvenir.svg);
   background-repeat: no-repeat;
   background-position: center 30px;
-}
+} */
 .search {
-  padding: 96px 304px;
+  padding: 86px 304px 96px 304px;
 }
 .search-title {
   text-align: center;
@@ -278,12 +366,37 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   max-width: 175px;
-  margin: auto auto 30px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  padding: 0 2px 0;
+  position: relative;
+}
+.advantages-item-title::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: -32px;
+  left: 50%;
+  margin-left: -30px;
 }
 .advantages-item-description {
   margin: 0;
 }
-.advantages-title-white,
+.advantages-title-white {
+  color: #fff;
+}
+.advantages-title-white::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  bottom: -32px;
+  left: 50%;
+  margin-left: -30px;
+}
 .advantages-description-white {
   color: #fff;
 }
@@ -366,14 +479,49 @@ body {
 }
 .footer-social-list {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin: 0;
   padding: 0;
+  width: 145px;
 }
 .footer-social-link {
   list-style: none;
-  width: 47px;
+  /* width: 47px;
   height: 40px;
   border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.footer-social-link a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 10px;
+  height: 40px;
+}
+
+.social-yotube,
+.social-telegram,
+.social-vkontakte {
+  fill: rgba(131, 179, 211, 1);
+}
+
+.social-yotube:hover,
+.social-telegram:hover,
+.social-vkontakte:hover {
+  fill: rgba(104, 162, 202, 1);
+}
+/* .social-yotube:focus,
+.social-telegram:focus,
+.social-vkontakte:focus {
+  fill: rgba(104, 162, 202, 1);
+} */
+.social-yotube:active,
+.social-telegram:active,
+.social-vkontakte:active {
+  fill: rgba(104, 162, 202, 0.3);
 }
 .footer-phone {
   font-size: 40px;
@@ -381,17 +529,42 @@ body {
   color: #000;
   text-decoration: none;
 }
+.footer-phone:hover {
+  color: rgba(117, 97, 87, 1);
+}
+
+.footer-phone:focus {
+  color: rgba(117, 97, 87, 1);
+}
+.footer-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .footer-logo {
   display: block;
   align-self: center;
 }
+.logo-academy {
+  fill: rgba(0, 0, 0, 1);
+}
+.logo-academy:hover {
+  fill: rgba(117, 97, 87, 1);
+}
+.footer-logo:focus svg {
+  fill: rgba(117, 97, 87, 1);
+}
+
+/*  */
+.logo-academy:active {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
 .main-header-wrapper {
   color: #fff;
   background-image: url(../images/background-images/filter-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  /* BACK COLOR ДЛЯ ВИДИМОСТИ КОНТЕНТНОГО ИЗОБРАЖЕНИЯ В СЛУЧАЕ НЕПОДГРУЗКИ ДЕКОРАТИВНОГО(БЕЛОГО ЦВЕТА)  */
   background-color: #000000;
   padding: 35px 70px 70px;
 }
@@ -410,13 +583,51 @@ body {
 .breadcrubs-link {
   font-size: 16px;
 }
+.breadcrubs-house {
+  fill: white;
+}
+.breadcrubs-house:hover {
+  fill: rgba(255, 255, 255, 0.6);
+}
+.breadcrubs-house:active {
+  fill: rgba(255, 255, 255, 0.3);
+}
+.breadcrubs-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  background-image: url(../images/arrow-right.svg);
+  width: 7px;
+  height: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 10px;
+  position: relative;
+  bottom: 15px;
+  left: 15px;
+}
 .breadcrubs-item {
   list-style: none;
+}
+.catalog-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+}
+.catalog-filter fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 .catalog-filter-title {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+  margin-bottom: 32px;
 }
 .catalog-filter-item {
   list-style: none;
@@ -424,6 +635,10 @@ body {
 .control {
   line-height: 23px;
   cursor: pointer;
+}
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 .button-apply {
   font-family: inherit;
@@ -489,6 +704,9 @@ body {
   gap: 8px;
 }
 .view-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 48px;
   height: 48px;
   border: 2px solid #e5e5e5;
@@ -496,8 +714,25 @@ body {
   background-color: #ffffff;
   cursor: pointer;
 }
+
 .button-active {
   border: 2px solid #000000;
+}
+
+.grid-button {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.view-button:hover {
+  border: 2px solid #000;
+}
+
+.view-button:focus {
+  border: 2px solid #000;
+}
+
+.view-button:active {
+  border: 2px solid #000;
 }
 .product-list {
   display: grid;
@@ -568,6 +803,22 @@ body {
   min-height: 36px;
   align-self: flex-start;
 }
+.product-card-button:hover {
+  background-color: rgba(97, 80, 72, 1);
+  outline: 3px solid #83b3d3;
+}
+.product-card-button:focus {
+  /* border: ; */
+  /* outline: 3px solid #83b3d3; */
+}
+.product-card-button:focus-visible {
+  /* border: ; */
+  outline: 3px solid #83b3d3;
+}
+.product-card-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(117, 97, 87, 1);
+}
 .product-card-text {
   margin: 0;
 }
@@ -580,9 +831,46 @@ body {
   background-color: #82b3d3;
   margin-right: 0;
 }
+.product-favorites:hover {
+  background-color: rgba(104, 162, 202, 1);
+}
+.product-favorites:focus {
+  background-color: rgba(104, 162, 202, 1);
+}
+.product-favorites:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(130, 179, 211, 1);
+}
+
 .active-button {
   background-color: #7db54f;
 }
+.active-button:hover {
+  background-color: rgba(108, 158, 66, 1);
+}
+.active-button:focus {
+  background-color: rgba(108, 158, 66, 1);
+}
+.active-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(125, 181, 79, 1);
+}
+.product-card-stars {
+  height: 17px;
+  margin: auto 0;
+  background-image: url(../images/stars-product.svg);
+  background-repeat: space no-repeat;
+}
+.product-card-stars-4 {
+  width: 89px;
+}
+.product-card-stars-3 {
+  width: 66px;
+}
+.product-card-stars-2 {
+  width: 42px;
+}
+
 .rating {
   color: #333333;
   font-size: 16px;
@@ -612,12 +900,23 @@ body {
   justify-content: center;
   text-decoration: none;
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: rgba(130, 179, 211, 1);
   text-transform: uppercase;
   border-radius: 4px;
   padding: 0 10px;
   min-width: 60px;
   height: 60px;
+}
+.pagination-link:hover {
+  background-color: rgba(104, 162, 202, 1);
+}
+.pagination-link:focus {
+  background-color: rgba(104, 162, 202, 1);
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(130, 179, 211, 1);
 }
 .pagination-item:nth-child(5) .pagination-link {
   color: #000000;
@@ -632,5 +931,6 @@ body {
   background-color: #fff;
   color: inherit;
 }
-/* Добавить контейнер внутри боди */
-/*  */
+
+/* План работы
+1.Поменять состояния у всех кнопок!(hover,focus,active)
