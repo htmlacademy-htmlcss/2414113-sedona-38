@@ -127,21 +127,21 @@
               <!-- Второй класс артиклу для background-image -->
               <article class="service-articale service-house-article">
                 <h3 class="service-item-title service-icon-house">Жильё</h3>
-                <p class="service-item-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                <p class="service-item-text">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
               </article>
             </li>
             <li class="service-item service-food-custom">
               <!-- Второй класс артиклу для background-image -->
               <article class="service-articale service-food-article">
                 <h3 class="service-item-title service-icon-food">Еда</h3>
-                <p class="service-item-text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+                <p class="service-item-text">Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!</p>
               </article>
             </li>
             <li class="service-item service-souvenir-custom">
               <!-- Второй класс артиклу для background-image -->
               <article class="service-articale service-souvenir-article">
                 <h3 class="service-item-title service-icon-souvenir">Сувениры</h3>
-                <p class="service-item-text">Не только китайского, но и настоящего местного производства!</p>
+                <p class="service-item-text">Не только китайского,<br>но и настоящего местного производства!</p>
               </article>
             </li>
           </ul>
@@ -219,6 +219,54 @@
           </a>
         </section>
       </footer>
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-auth">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="field-group">
+              <label class="search-option" for="date-start">Дата заезда:</label>
+              <input class="field field-date" id="date-start" name="date-start" type="text" value="27 апреля 2020"
+                placeholder="Укажите дату">
+              <p class="modal-error">Мы не можем отправить вас в прошлое.</p>
+            </div>
+            <div class="field-group">
+              <label class="search-option" for="date-finish">Дата выезда:</label>
+              <input class="field field-date" id="date-finish" name="date-finish" type="text" value="1 сентября 2023"
+                placeholder="Укажите дату">
+              <p class="modal-warning">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+
+
+            <div class="modal-field-group">
+              <div class="modal-adult">
+                <label class="search-option" for="adult">Взрослые:</label>
+                <div class="modal-number-wrapper">
+                  <button class="modal-button-group modal-minus"></button>
+                  <input class="modal-number" type="number" id="adult" name="adults" placeholder="2">
+                  <button class="modal-button-group modal-plus"></button>
+                </div>
+              </div>
+              <div class="modal-child">
+                <label class="search-option" for="child">Дети:</label>
+                <div class="modal-number-wrapper">
+                  <button class="modal-button-group modal-minus"></button>
+                  <input class="modal-number" type="number" id="child" name="childs" placeholder="2">
+                  <button class="modal-button-group modal-plus"></button>
+                </div>
+
+              </div>
+            </div>
+            <button class="modal-search-button">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 
