@@ -10,7 +10,7 @@
 
   <body>
     <div class="page-body">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <nav class="header-navigation">
           <!-- <div class="navigation-wrapper"> -->
           <a class="header-link" href="index.html">
@@ -57,7 +57,7 @@
         </nav>
       </header>
 
-      <main class="main-inner main-container">
+      <main class="main-inner main-container" data-test="main">
         <!-- Обёртка для фонового изображения -->
         <div class="main-header-wrapper">
           <header class="header-inner">
@@ -85,7 +85,7 @@
           </header>
           <section class="catalog-products">
             <h2 class="visually-hidden">Поиск гостиниц</h2>
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" data-test="filter">
               <div class="fieldset-wrapper">
                 <fieldset>
                   <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -185,7 +185,7 @@
           </section>
         </div>
 
-        <section class="section-filter">
+        <section class="section-filter" data-test="catalog">
           <header class="section-filter-header">
             <h2 class="visually-hidden">Список гостиниц</h2>
             <p class="select-info">Найдено гостиниц: 38</p>
@@ -343,7 +343,7 @@
           </footer>
         </section>
         <!-- Второй класс для изменения фонового изображения "newsletter-changed" -->
-        <section class="newsletter newsletter-changed">
+        <section class="newsletter newsletter-changed" data-test="subscribe">
           <h3 class="newsletter-title">
             Подпишитесь на рассылку
           </h3>
@@ -361,7 +361,7 @@
         </section>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <section class="footer-contacts">
           <h2 class="visually-hidden">Ссылки на соц.сети</h2>
           <ul class="footer-social-list">
@@ -407,61 +407,6 @@
           </a>
         </section>
       </footer>
-    </div>
-    <!-- Модальное окно -->
-    <div class="modal-container modal-container-close">
-      <div class="modal modal-auth">
-        <button class="modal-close-button">
-          <span class="visually-hidden">Закрыть</span>
-        </button>
-        <section class="modal-content">
-          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="field-group">
-              <label class="search-option" for="date-start">Дата заезда:</label>
-              <input class="field field-date" id="date-start" name="date-start" type="text" value="27 апреля 2020"
-                placeholder="Укажите дату">
-              <p class="modal-error">Мы не можем отправить вас в прошлое.</p>
-            </div>
-            <div class="field-group">
-              <label class="search-option" for="date-finish">Дата выезда:</label>
-              <input class="field field-date" id="date-finish" name="date-finish" type="text" value="1 сентября 2023"
-                placeholder="Укажите дату">
-              <p class="modal-warning">На эти даты есть свободные номера. Пока есть.</p>
-            </div>
-            <div class="modal-field-group">
-              <div class="modal-people">
-                <label class="search-option" for="adult">Взрослые:</label>
-                <div class="modal-number-wrapper">
-                  <button class="modal-button-group modal-minus" type="button"></button>
-                  <input class="modal-number" type="number" id="adult" name="adults" placeholder="2" value="2">
-                  <button class="modal-button-group modal-plus" type="button"></button>
-                </div>
-              </div>
-              <div class="modal-people">
-                <div>
-                  <label class="search-option" for="child">Дети:</label>
-
-                  <button class="modal-info" type="button" aria-labelledby="tooltip-label-date">i</button>
-                  <span class="modal-info-tooltip" id="tooltip-label-date" role="tooltip">Укажите количество детей,
-                    которые будут с вами,
-                    возраст которых от 6
-                    до
-                    18
-                    лет. Дети до 6 лет размещаются бесплатно.</span>
-                </div>
-                <div class="modal-number-wrapper">
-                  <button class="modal-button-group modal-minus" type="button"></button>
-                  <input class="modal-number" type="number" id="child" name="childs" placeholder="2" value="2">
-                  <button class="modal-button-group modal-plus" type="button"></button>
-                </div>
-
-              </div>
-            </div>
-            <button class="modal-search-button">Найти</button>
-          </form>
-        </section>
-      </div>
     </div>
   </body>
 
