@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" sizes="32x32">
     <title>HTML Academy: Седона</title>
   </head>
 
   <body>
     <div class="page-body">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <nav class="header-navigation">
           <!-- <div class="navigation-wrapper"> -->
-          <a class="header-link">
+          <a class="header-link" href="index.html">
             <img class="header-logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотин Седона">
           </a>
           <ul class="navigation-list">
@@ -30,25 +30,24 @@
           <!-- </div> -->
           <ul class="navigation-list navigation-user">
             <li class="navigation-item-user">
-              <a class="navigation-link-search" href="catalog.html">
-                <span class="visually-hidden">Поиск</span>
-                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="navigation-link-search">
+                <span class="visually-hidden">.Поиск</span>
+                <svg width="19" height="19" aria-hidden="true" focusable="false" viewBox="0 0 19 19" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path
-                    d="M18.5 17.0083L14.8 13.3287C15.8 12.0359 16.5 10.3453 16.5 8.4558C16.5 4.08011 12.9 0.5 8.5 0.5C4.1 0.5 0.5 4.17956 0.5 8.55525C0.5 12.9309 4.1 16.511 8.5 16.511C10.3 16.511 12 15.9144 13.4 14.8204L17.1 18.5L18.5 17.0083ZM8.5 14.5221C5.2 14.5221 2.5 11.837 2.5 8.55525C2.5 5.27348 5.2 2.5884 8.5 2.5884C11.8 2.5884 14.5 5.27348 14.5 8.55525C14.5 11.837 11.8 14.5221 8.5 14.5221Z"
-                    fill="black" />
+                    d="M18.5 17.0083L14.8 13.3287C15.8 12.0359 16.5 10.3453 16.5 8.4558C16.5 4.08011 12.9 0.5 8.5 0.5C4.1 0.5 0.5 4.17956 0.5 8.55525C0.5 12.9309 4.1 16.511 8.5 16.511C10.3 16.511 12 15.9144 13.4 14.8204L17.1 18.5L18.5 17.0083ZM8.5 14.5221C5.2 14.5221 2.5 11.837 2.5 8.55525C2.5 5.27348 5.2 2.5884 8.5 2.5884C11.8 2.5884 14.5 5.27348 14.5 8.55525C14.5 11.837 11.8 14.5221 8.5 14.5221Z" />
                 </svg>
               </a>
             </li>
             <li class="navigation-item-user">
               <a class="navigation-link-quantity" href="#">
-                <span class="visually-hidden" ">Избранное</span>
-                <svg class=" navigation-icon" width="18" height="17" viewBox="0 0 18 17" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <span class="visually-hidden">.Избранное</span>
+                <svg class=" navigation-icon" aria-hidden="true" focusable="false" width="18" height="17"
+                  viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
-                    d="M8.9 17C8.6 17 8.3 16.9 8.1 16.6C2.7 10.5 1.4 9.1 1.1 8.7C0.4 7.8 0 6.6 0 5.4C0 2.4 2.4 0 5.5 0C6.8 0 8 0.5 9 1.3C10 0.5 11.3 0 12.5 0C15.5 0 18 2.4 18 5.4C18 6.7 17.5 7.9 16.7 8.8L9.7 16.7C9.5 16.9 9.3 17 8.9 17ZM2.9 7.5C3.2 7.9 6.4 11.5 9 14.4L15.2 7.4C15.7 6.9 15.9 6.2 15.9 5.4C15.9 3.6 14.4 2.1 12.6 2.1C11.6 2.1 10.6 2.6 9.9 3.4C9.6 3.7 9.3 3.8 9 3.8C8.7 3.8 8.4 3.6 8.2 3.4C7.5 2.6 6.5 2.1 5.5 2.1C3.7 2.1 2.2 3.6 2.2 5.4C2.1 6.3 2.5 7 2.9 7.5C2.8 7.5 2.8 7.5 2.9 7.5Z"
-                    fill="black" />
-                  </svg>
-                  <span class="header-quantity">12</span>
+                    d="M8.9 17C8.6 17 8.3 16.9 8.1 16.6C2.7 10.5 1.4 9.1 1.1 8.7C0.4 7.8 0 6.6 0 5.4C0 2.4 2.4 0 5.5 0C6.8 0 8 0.5 9 1.3C10 0.5 11.3 0 12.5 0C15.5 0 18 2.4 18 5.4C18 6.7 17.5 7.9 16.7 8.8L9.7 16.7C9.5 16.9 9.3 17 8.9 17ZM2.9 7.5C3.2 7.9 6.4 11.5 9 14.4L15.2 7.4C15.7 6.9 15.9 6.2 15.9 5.4C15.9 3.6 14.4 2.1 12.6 2.1C11.6 2.1 10.6 2.6 9.9 3.4C9.6 3.7 9.3 3.8 9 3.8C8.7 3.8 8.4 3.6 8.2 3.4C7.5 2.6 6.5 2.1 5.5 2.1C3.7 2.1 2.2 3.6 2.2 5.4C2.1 6.3 2.5 7 2.9 7.5C2.8 7.5 2.8 7.5 2.9 7.5Z" />
+                </svg>
+                <span class="header-quantity">12</span>
               </a>
             </li>
             <li class="navigation-item-user">
@@ -58,7 +57,7 @@
         </nav>
       </header>
 
-      <main class="main-inner main-container">
+      <main class="main-inner main-container" data-test="main">
         <!-- Обёртка для фонового изображения -->
         <div class="main-header-wrapper">
           <header class="header-inner">
@@ -70,7 +69,7 @@
                 <a class="breadcrubs-link" href="index.html">
                   <span class="visually-hidden">На главную</span>
                   <svg class="breadcrubs-house" width="13" height="13" viewBox="0 0 13 13" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path
                       d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z" />
                     <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" />
@@ -86,7 +85,7 @@
           </header>
           <section class="catalog-products">
             <h2 class="visually-hidden">Поиск гостиниц</h2>
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" data-test="filter">
               <div class="fieldset-wrapper">
                 <fieldset>
                   <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -157,16 +156,15 @@
                   <div class="range">
                     <div class="range-wrapper-inputs">
                       <!-- Стоит ли оборачивать в label -->
-                      <label class="filter-price-max" for="">
+                      <label class="filter-price-max">
                         <input class="filter-price-input" type="number" name="min-price" value="0">
                         <span>от</span></label>
-                      <label class="filter-price-min" for="">
+                      <label class="filter-price-min">
                         <input class="filter-price-input" type="number" name="max-price" value="9000">
                         <span>до</span></label>
                     </div>
                     <div class="range-scale" style="width: 287px">
-                      <!-- Как убрать opacity у дочернего элемента? -->
-                      <div class="range-bar" style="left: 0px; width: 226px;">
+                      <div class="range-bar" style="left: 0; width: 226px;">
                         <button class="range-toggle toggle-min" type="button">
                           <span class="visually-hidden">Изменить минимальную цену</span>
                         </button>
@@ -187,7 +185,7 @@
           </section>
         </div>
 
-        <section class="section-filter">
+        <section class="section-filter" data-test="catalog">
           <header class="section-filter-header">
             <h2 class="visually-hidden">Список гостиниц</h2>
             <p class="select-info">Найдено гостиниц: 38</p>
@@ -205,7 +203,7 @@
                     товаров</span>
                   <!--  -->
                   <svg class="grid-button" width="16" height="14" viewBox="0 0 16 14" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M4 0H0V6H4V0Z" />
                     <path d="M16 0H12V6H16V0Z" />
                     <path d="M10 0H6V6H10V0Z" />
@@ -220,7 +218,8 @@
                 <button class="view-button" type="button">
                   <span class="visually-hidden">Слайд
                     товаров</span>
-                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
                     <path d="M16 12H0V14H16V12Z" fill="black" />
                     <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black" />
                   </svg>
@@ -230,7 +229,8 @@
                 <button class="view-button" type="button">
                   <span class="visually-hidden">Список
                     товаров</span>
-                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
                     <path d="M2 0H0V2H2V0Z" fill="black" />
                     <path d="M16 0H4V2H16V0Z" fill="black" />
                     <path d="M2 4H0V6H2V4Z" fill="black" />
@@ -343,7 +343,7 @@
           </footer>
         </section>
         <!-- Второй класс для изменения фонового изображения "newsletter-changed" -->
-        <section class="newsletter newsletter-changed">
+        <section class="newsletter newsletter-changed" data-test="subscribe">
           <h3 class="newsletter-title">
             Подпишитесь на рассылку
           </h3>
@@ -361,7 +361,7 @@
         </section>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <section class="footer-contacts">
           <h2 class="visually-hidden">Ссылки на соц.сети</h2>
           <ul class="footer-social-list">
@@ -398,7 +398,9 @@
           </ul>
           <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           <a class="footer-logo" target="_blank" href="https://htmlacademy.ru/">
-            <svg class="logo-academy" xmlns="http://www.w3.org/2000/svg" width="115" height="34" fill="none">
+            <span class="visually-hidden">.HTML academy. Готовим востребованных разработчиков</span>
+            <svg class="logo-academy" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="115" height="34"
+              fill="none">
               <path
                 d="M0 13.26v2.6h2.5v-2.6H0ZM11.6 4.86c-1.6 0-2.8.7-3.6 1.7h-.1V.36h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2v-6.1c.1-3-1.8-4.9-4.5-4.9ZM26.6 5.16h-4.8v-3.7h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1v-5.7h4.8v-2ZM41.1 4.96c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1v-1.6H29v10.6h2v-5.4c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 13.06c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V.36h-2v12.7ZM28.9 20.06c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22.36c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1v-.2ZM55.1 20.06c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 20.16c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2v-15.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 18.26c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 18.26c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27.36l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z" />
             </svg>
