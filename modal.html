@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.svg">
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -12,9 +12,8 @@
     <div class="page-body">
       <header class="page-header" data-test="header">
         <nav class="header-navigation">
-          <!-- <div class="navigation-wrapper"> -->
           <a class="header-link">
-            <img class="header-logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотин Седона">
+            <img class="header-logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотин Седона.">
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -27,7 +26,6 @@
               <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-          <!-- </div> -->
           <ul class="navigation-list navigation-user">
             <li class="navigation-item-user">
               <a class="navigation-link-search" href="catalog.html">
@@ -61,7 +59,7 @@
         <section class="hero" data-test="hero">
           <h1 class="visually-hidden">Welcome to the gorgeous Sedona</h1>
           <img class="welcome-img" src="images/welcome.svg" width="458" height="352"
-            alt="Седона. Добро пожаловать к великолепному">
+            alt="Седона. Добро пожаловать к великолепному.">
         </section>
         <section class="advantages" data-test="advantages">
           <h2 class="visually-hidden">Преимущества</h2>
@@ -83,7 +81,7 @@
                     там течёт своя жизнь</p>
                 </div>
                 <img class="advantages-img" src="images/sedona-city.jpg" width="800" height="385"
-                  alt="Фото города Седона">
+                  alt="Фото города Седона.">
               </article>
             </li>
             <li class="advantages-item advantages-item-custom">
@@ -107,7 +105,7 @@
             <li class="advantages-item">
               <article class="advantages-article">
                 <img class="advantages-img" src="images/bridge.jpg" width="800" height="385"
-                  alt="Достопримечательность Мост Дьявола">
+                  alt="Достопримечательность Мост Дьявола.">
                 <div class="advantages-wrapper">
                   <h3 class="advantages-item-title advantages-title-white">Там есть<br>мост дьявола</h3>
                   <p class="advantages-item-description advantages-description-white">Да, по нему можно пройти! Если вы
@@ -128,7 +126,7 @@
               </article>
             </li>
             <li class="service-item">
-              <article class="service-articale">
+              <article class="service-articale service-articale-custom">
                 <h3 class="service-item-title service-icon-food">Еда</h3>
                 <p class="service-item-text">Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!</p>
               </article>
@@ -160,7 +158,7 @@
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="newsletter-email">
               <span class="visually-hidden">.E-mail</span>
-              <input class="newsletter-input" type="email" placeholder="Ваш e-mail" required>
+              <input class="newsletter-input" type="email" name="email" placeholder="Ваш e-mail" required>
             </label>
             <button class="newsletter-button" type="submit">
               Подписаться</button>
@@ -218,8 +216,8 @@
 
     <!-- Модальное окно -->
     <div class="modal-container">
-      <div class="modal modal-auth" data-test="modal">
-        <button class="modal-close-button">
+      <div class="modal modal-auth">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">.Закрыть</span>
         </button>
         <section class="modal-content">
@@ -241,9 +239,13 @@
               <div class="modal-people">
                 <label class="search-option" for="adult">Взрослые:</label>
                 <div class="modal-number-wrapper">
-                  <button class="modal-button-group modal-minus" type="button"></button>
+                  <button class="modal-button-group modal-minus" type="button">
+                    <span class="visually-hidden">Убавить</span>
+                  </button>
                   <input class="modal-number" type="number" id="adult" name="adults" placeholder="2" value="2">
-                  <button class="modal-button-group modal-plus" type="button"></button>
+                  <button class="modal-button-group modal-plus" type="button">
+                    <span class="visually-hidden">Прибавить</span>
+                  </button>
                 </div>
               </div>
               <div class="modal-people">
@@ -259,14 +261,18 @@
                     лет. Дети до 6 лет размещаются бесплатно.</span>
                 </div>
                 <div class="modal-number-wrapper">
-                  <button class="modal-button-group modal-minus" type="button"></button>
+                  <button class="modal-button-group modal-minus" type="button">
+                    <span class="visually-hidden">Убавить</span>
+                  </button>
                   <input class="modal-number" type="number" id="child" name="childs" placeholder="2" value="2">
-                  <button class="modal-button-group modal-plus" type="button"></button>
+                  <button class="modal-button-group modal-plus" type="button">
+                    <span class="visually-hidden">Прибавить</span>
+                  </button>
                 </div>
 
               </div>
             </div>
-            <button class="modal-search-button">Найти</button>
+            <button class="modal-search-button" type="submit">Найти</button>
           </form>
         </section>
       </div>

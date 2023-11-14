@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.svg">
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -12,9 +12,8 @@
     <div class="page-body">
       <header class="page-header" data-test="header">
         <nav class="header-navigation">
-          <!-- <div class="navigation-wrapper"> -->
           <a class="header-link" href="index.html">
-            <img class="header-logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотин Седона">
+            <img class="header-logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотин Седона.">
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -27,7 +26,6 @@
               <a class="navigation-link  navigation-link-current">Гостиницы</a>
             </li>
           </ul>
-          <!-- </div> -->
           <ul class="navigation-list navigation-user">
             <li class="navigation-item-user">
               <a class="navigation-link-search">
@@ -75,6 +73,7 @@
                     <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" />
                   </svg>
                 </a>
+                <span class="breadcrubs-arrow"></span>
               </li>
               <li class="breadcrubs-item">
                 <a class="breadcrubs-link">
@@ -149,13 +148,11 @@
                   </ul>
                 </fieldset>
               </div>
-              <!--  -->
               <div class="fieldset-wrapper">
                 <fieldset>
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                   <div class="range">
                     <div class="range-wrapper-inputs">
-                      <!-- Стоит ли оборачивать в label -->
                       <label class="filter-price-max">
                         <input class="filter-price-input" type="number" name="min-price" value="0">
                         <span>от</span></label>
@@ -175,7 +172,6 @@
                     </div>
                   </div>
                 </fieldset>
-                <!--  -->
                 <div class="button-wrapper">
                   <button class="button-apply" type="submit">Применить</button>
                   <button class="button-reset" type="reset">Сбросить</button>
@@ -190,7 +186,7 @@
             <h2 class="visually-hidden">Список гостиниц</h2>
             <p class="select-info">Найдено гостиниц: 38</p>
             <div class="select sorting-type">
-              <select class="select-control" aria-label="Сортировка">
+              <select class="select-control" aria-label="Сортировка" disabled>
                 <option value="cheap">Сначала дешевые</option>
                 <option value="expensive">Сначала дорогие</option>
                 <option value="popular">Сначала популярные</option>
@@ -198,48 +194,21 @@
             </div>
             <ul class="view-button-list">
               <li class="view-button-item">
-                <button class="view-button button-active-current" type="button">
+                <button class="view-button grid-button button-active-current" type="button">
                   <span class="visually-hidden">Сетка
                     товаров</span>
-                  <!--  -->
-                  <svg class="grid-button" width="16" height="14" viewBox="0 0 16 14" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M4 0H0V6H4V0Z" />
-                    <path d="M16 0H12V6H16V0Z" />
-                    <path d="M10 0H6V6H10V0Z" />
-                    <path d="M4 8H0V14H4V8Z" />
-                    <path d="M16 8H12V14H16V8Z" />
-                    <path d="M10 8H6V14H10V8Z" />
-                  </svg>
-                  <!--  -->
                 </button>
               </li>
               <li class="view-button-item">
-                <button class="view-button" type="button">
+                <button class="view-button slide-button" type="button">
                   <span class="visually-hidden">Слайд
                     товаров</span>
-                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M16 12H0V14H16V12Z" fill="black" />
-                    <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black" />
-                  </svg>
                 </button>
               </li>
               <li class="view-button-item">
-                <button class="view-button" type="button">
+                <button class="view-button list-button" type="button">
                   <span class="visually-hidden">Список
                     товаров</span>
-                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M2 0H0V2H2V0Z" fill="black" />
-                    <path d="M16 0H4V2H16V0Z" fill="black" />
-                    <path d="M2 4H0V6H2V4Z" fill="black" />
-                    <path d="M16 4H4V6H16V4Z" fill="black" />
-                    <path d="M2 8H0V10H2V8Z" fill="black" />
-                    <path d="M16 8H4V10H16V8Z" fill="black" />
-                    <path d="M2 12H0V14H2V12Z" fill="black" />
-                    <path d="M16 12H4V14H16V12Z" fill="black" />
-                  </svg>
                 </button>
               </li>
             </ul>
@@ -249,7 +218,7 @@
               <article class="product-card-article">
                 <a class="product-card-link" href="#">
                   <img class="product-card-img" src="images/hotel/amara.jpg" width="300" height="212"
-                    alt="Amara Resort & Spa">
+                    alt="Amara Resort & Spa.">
                 </a>
                 <a class="product-card-link" href="#">
                   <h3 class="product-card-title">Amara Resort & Spa</h3>
@@ -268,7 +237,7 @@
               <article class="product-card-article">
                 <a class="product-card-link" href="#">
                   <img class="product-card-img" src="images/hotel/villas.jpg" width="300" height="212"
-                    alt="Villas at Poco Diablo">
+                    alt="Villas at Poco Diablo.">
                 </a>
                 <a class="product-card-link" href="#">
                   <h3 class="product-card-title">Villas at Poco Diablo</h3>
@@ -286,7 +255,7 @@
               <article class="product-card-article">
                 <a class="product-card-link" href="#">
                   <img class="product-card-img" src="images/hotel/desert.jpg" width="300" height="212"
-                    alt="Desert Quail Inn">
+                    alt="Desert Quail Inn.">
                 </a>
                 <a class="product-card-link" href="#">
                   <h3 class="product-card-title">Desert Quail Inn</h3>
@@ -304,7 +273,7 @@
               <article class="product-card-article">
                 <a class="product-card-link" href="#">
                   <img class="product-card-img" src="images/hotel/greentree.jpg" width="300" height="212"
-                    alt="GreenTree Inn">
+                    alt="GreenTree Inn.">
                 </a>
                 <a class="product-card-link" href="#">
                   <h3 class="product-card-title">GreenTree Inn</h3>
@@ -353,7 +322,7 @@
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="newsletter-email">
               <span class="visually-hidden">E-mail</span>
-              <input class="newsletter-input" type="email" placeholder="Ваш e-mail" required>
+              <input class="newsletter-input" type="email" name="email" placeholder="Ваш e-mail" required>
             </label>
             <button class="newsletter-button" type="submit">
               Подписаться</button>
