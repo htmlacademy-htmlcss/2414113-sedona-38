@@ -761,7 +761,7 @@ a:active .social-vkontakte {
 }
 
 .header-inner {
-  margin-bottom: 31px;
+  margin-bottom: 41px;
 }
 
 .header-title {
@@ -775,7 +775,7 @@ a:active .social-vkontakte {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 24px;
+  gap: 11px;
   margin: 0;
   padding: 0;
 }
@@ -788,32 +788,33 @@ a:active .social-vkontakte {
   fill: #ffffff;
 }
 
-.breadcrubs-house:hover {
+.breadcrubs-link:hover .breadcrubs-house {
   fill: rgba(255, 255, 255, 0.6);
 }
 .breadcrubs-link:focus .breadcrubs-house {
   fill: #000000;
 }
 
-.breadcrubs-house:active {
+.breadcrubs-link:active .breadcrubs-house {
   fill: rgba(255, 255, 255, 0.3);
 }
 
-.breadcrubs-arrow {
+.breadcrubs-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+/* стрелка для хлебных крошек */
+.breadcrubs-item:not(:last-child)::after {
+  content: "";
   display: block;
   background-image: url("../images/arrow-right.svg");
   width: 7px;
-  height: 9px;
+  height: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
   margin-left: 10px;
-  position: relative;
-  bottom: 15px;
-  left: 13px;
-}
-.breadcrubs-item {
-  list-style: none;
 }
 
 .catalog-filter {
@@ -1224,19 +1225,19 @@ a:active .social-vkontakte {
 }
 
 .grid-button {
-  background-image: url(../images/filter-icon/grid-view.svg);
+  background-image: url("../images/filter-icon/grid-view.svg");
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .slide-button {
-  background-image: url(../images/filter-icon/slide-view.svg);
+  background-image: url("../images/filter-icon/slide-view.svg");
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .list-button {
-  background-image: url(../images/filter-icon/list-view.svg);
+  background-image: url("../images/filter-icon/list-view.svg");
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -1573,17 +1574,27 @@ a:active .social-vkontakte {
   right: 52px;
   width: 52px;
   height: 52px;
-  background-image: url("../images/close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
   border-radius: 50%;
   background-color: rgba(242, 242, 242, 1);
   cursor: pointer;
 }
-
+.close-button {
+  fill: #000000;
+  position: relative;
+  top: 2px;
+}
+.modal-close-button:hover {
+  background-color: rgba(230, 230, 230, 1);
+}
+.modal-close-button:focus {
+  background-color: rgba(230, 230, 230, 1);
+}
 .modal-close-button:active {
-  opacity: 0.6;
+  background-color: rgba(230, 230, 230, 1);
+}
+.modal-close-button:active svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .modal-title {
@@ -1639,11 +1650,11 @@ a:active .social-vkontakte {
 }
 
 .field {
+  font-family: "PT Sans", sans-serif;
   padding: 12px 20px 6px;
   width: 440px;
   height: 48px;
   color: #000000;
-  font-family: "PT Sans";
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -1707,8 +1718,10 @@ a:active .social-vkontakte {
   align-items: center;
   gap: 46px;
 }
-
-.modal-people div {
+.child-info {
+  display: flex;
+}
+.modal-number-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1716,7 +1729,12 @@ a:active .social-vkontakte {
   -ms-flex-align: end;
   align-items: flex-end;
 }
-
+.button-custom {
+  width: 40px;
+  height: 48px;
+  /* display: flex; */
+  background-color: #f2f2f2;
+}
 .modal-people:last-child {
   gap: 57px;
 }
@@ -1770,16 +1788,18 @@ a:active .social-vkontakte {
 }
 
 .modal-button-group {
-  padding: 14px 10px;
+  /* padding: 14px 10px; */
   border: none;
-  width: 40px;
+  width: 20px;
   background-color: #f2f2f2;
-  height: 48px;
+  height: 20px;
   cursor: pointer;
 }
 
 .modal-minus {
   position: relative;
+  top: 8px;
+  left: 10px;
 }
 
 .modal-minus::before {
@@ -1791,7 +1811,8 @@ a:active .social-vkontakte {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  top: 19px;
+  top: 4px;
+  left: 8px;
 }
 
 .modal-minus:hover::before {
@@ -1799,6 +1820,11 @@ a:active .social-vkontakte {
 }
 
 .modal-minus:focus::before {
+  background-color: #000000;
+  color: none;
+}
+
+.modal-minus:focus-visible::before {
   background-color: #000000;
 }
 
@@ -1808,6 +1834,8 @@ a:active .social-vkontakte {
 
 .modal-plus {
   position: relative;
+  top: 8px;
+  left: 10px;
 }
 
 .modal-plus::before {
@@ -1819,7 +1847,8 @@ a:active .social-vkontakte {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  top: 19px;
+  top: 4px;
+  left: 8px;
 }
 
 .modal-plus::after {
@@ -1831,21 +1860,22 @@ a:active .social-vkontakte {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  top: 19px;
+  top: 4px;
+  left: 8px;
 }
 
-.modal-plus:hover:before,
-.modal-plus:hover:after {
+.modal-plus:hover::before,
+.modal-plus:hover::after {
   background-color: #000000;
 }
 
-.modal-plus:focus:before,
-.modal-plus:focus:after {
+.modal-plus:focus::before,
+.modal-plus:focus::after {
   background-color: #000000;
 }
 
-.modal-plus:active:before,
-.modal-plus:active:after {
+.modal-plus:active::before,
+.modal-plus:active::after {
   background-color: rgba(117, 97, 87, 0.3);
 }
 
